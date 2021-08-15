@@ -10,10 +10,8 @@ import SwiftUI
 public struct PetSaveOnboardingView: View {
     
     @State var currentPageIndex = 0
-    @Binding private var presentedAsModal: Bool
     
-    public init(items: [OnboardingModel] , presentedAsModal: Binding<Bool>) {
-        _presentedAsModal = presentedAsModal
+    public init(items: [OnboardingModel]) {
         self.items = items
     }
     
@@ -64,7 +62,6 @@ public struct PetSaveOnboardingView: View {
                 
                 // Skip Button
                 Button(action: {
-                    presentedAsModal = false
                     onSkip()
                 }, label: {
                     HStack {
