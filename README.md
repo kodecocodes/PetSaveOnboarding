@@ -1,2 +1,3 @@
 # PetSaveOnboarding
-Swift Package Manager to accompany the Real-World iOS book
+
+A slider library written in SwiftUI for showing Onboarding screen in PetSave.
