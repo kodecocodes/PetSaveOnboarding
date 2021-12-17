@@ -53,7 +53,6 @@ public struct PetSaveOnboardingView: View {
     if items.isEmpty {
       Text("No items to show.")
     } else {
-      // TabView
       VStack {
         TabView(selection: $currentPageIndex) {
           ForEach(0..<items.count) { index in
@@ -66,7 +65,6 @@ public struct PetSaveOnboardingView: View {
         .indexViewStyle(.page(backgroundDisplayMode: .always))
         .onAppear(perform: setupPageControlAppearance)
 
-        // Next Button
         Button(action: next) {
           Text(nextButtonTitle)
             .frame(maxWidth: .infinity, maxHeight: 44)
@@ -74,7 +72,6 @@ public struct PetSaveOnboardingView: View {
         .animation(nil, value: currentPageIndex)
         .buttonStyle(OnboardingButtonStyle(color: .rwDark))
 
-        // Skip Button
         Button(action: onSkip) {
           Text(skipButtonTitle)
             .frame(maxWidth: .infinity, maxHeight: 44)
